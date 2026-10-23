@@ -1,0 +1,423 @@
+
+pytorch2.14.1:Á¤
+˜
+input_spectrogram
+encoder.0.weight
+encoder.0.biasgetitemnode_Conv_32"Conv*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ Já
+	namespaceÓ: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.1: torch.nn.modules.batchnorm.BatchNorm2d/_native_batch_norm_legit_no_training: aten._native_batch_norm_legit_no_training.defaultJ:
+!pkg.onnxscript.rewriter.rule_nameFuseBatchNormIntoConvJÇ
+pkg.torch.onnx.class_hierarchy¤['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¬
+pkg.torch.onnx.fx_node‘%_native_batch_norm_legit_no_training : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d, %p_encoder_1_weight, %p_encoder_1_bias, %b_encoder_1_running_mean, %b_encoder_1_running_var, 0.1, 1e-05), kwargs = {})Jb
+pkg.torch.onnx.name_scopesD['', 'encoder', 'encoder.1', '_native_batch_norm_legit_no_training']JÑ
+pkg.torch.onnx.stack_trace²File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/batchnorm.py", line 210, in forward
+    return F.batch_norm(
+—
+getitemrelu	node_relu"ReluJ›
+	namespace: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.2: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J„
+pkg.torch.onnx.fx_nodej%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'encoder', 'encoder.2', 'relu']Jè
+pkg.torch.onnx.stack_traceÉFile "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+•
+relu
+encoder.3.weight
+encoder.3.bias	getitem_3node_Conv_33"Conv*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ Jã
+	namespaceÕ: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.4: torch.nn.modules.batchnorm.BatchNorm2d/_native_batch_norm_legit_no_training_1: aten._native_batch_norm_legit_no_training.defaultJ:
+!pkg.onnxscript.rewriter.rule_nameFuseBatchNormIntoConvJÇ
+pkg.torch.onnx.class_hierarchy¤['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J°
+pkg.torch.onnx.fx_node•%_native_batch_norm_legit_no_training_1 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_1, %p_encoder_4_weight, %p_encoder_4_bias, %b_encoder_4_running_mean, %b_encoder_4_running_var, 0.1, 1e-05), kwargs = {})Jd
+pkg.torch.onnx.name_scopesF['', 'encoder', 'encoder.4', '_native_batch_norm_legit_no_training_1']JÑ
+pkg.torch.onnx.stack_trace²File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/batchnorm.py", line 210, in forward
+    return F.batch_norm(
+¥
+	getitem_3relu_1node_relu_1"ReluJ
+	namespace: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.5: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
+pkg.torch.onnx.fx_noden%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_3,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'encoder', 'encoder.5', 'relu_1']Jè
+pkg.torch.onnx.stack_traceÉFile "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+—
+relu_1
+encoder.6.weight
+encoder.6.bias	getitem_6node_Conv_34"Conv*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ Jã
+	namespaceÕ: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.7: torch.nn.modules.batchnorm.BatchNorm2d/_native_batch_norm_legit_no_training_2: aten._native_batch_norm_legit_no_training.defaultJ:
+!pkg.onnxscript.rewriter.rule_nameFuseBatchNormIntoConvJÇ
+pkg.torch.onnx.class_hierarchy¤['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J°
+pkg.torch.onnx.fx_node•%_native_batch_norm_legit_no_training_2 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_2, %p_encoder_7_weight, %p_encoder_7_bias, %b_encoder_7_running_mean, %b_encoder_7_running_var, 0.1, 1e-05), kwargs = {})Jd
+pkg.torch.onnx.name_scopesF['', 'encoder', 'encoder.7', '_native_batch_norm_legit_no_training_2']JÑ
+pkg.torch.onnx.stack_trace²File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/batchnorm.py", line 210, in forward
+    return F.batch_norm(
+¥
+	getitem_6relu_2node_relu_2"ReluJ
+	namespace: __main__.ConvAutoencoder/encoder: torch.nn.modules.container.Sequential/encoder.8: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
+pkg.torch.onnx.fx_noden%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_6,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'encoder', 'encoder.8', 'relu_2']Jè
+pkg.torch.onnx.stack_traceÉFile "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 55, in forward
+    z = self.encoder(x)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ð
+relu_2
+decoder.0.weight
+decoder.0.bias	getitem_9node_ConvTranspose_35"ConvTranspose*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ *
+output_padding@@ Jã
+	namespaceÕ: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.1: torch.nn.modules.batchnorm.BatchNorm2d/_native_batch_norm_legit_no_training_3: aten._native_batch_norm_legit_no_training.defaultJC
+!pkg.onnxscript.rewriter.rule_nameFuseBatchNormIntoConvTransposeJÇ
+pkg.torch.onnx.class_hierarchy¤['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J³
+pkg.torch.onnx.fx_node˜%_native_batch_norm_legit_no_training_3 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%convolution, %p_decoder_1_weight, %p_decoder_1_bias, %b_decoder_1_running_mean, %b_decoder_1_running_var, 0.1, 1e-05), kwargs = {})Jd
+pkg.torch.onnx.name_scopesF['', 'decoder', 'decoder.1', '_native_batch_norm_legit_no_training_3']JÓ
+pkg.torch.onnx.stack_trace´File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/batchnorm.py", line 210, in forward
+    return F.batch_norm(
+§
+	getitem_9relu_3node_relu_3"ReluJ
+	namespace: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.2: torch.nn.modules.activation.ReLU/relu_3: aten.relu.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
+pkg.torch.onnx.fx_noden%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_9,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'decoder', 'decoder.2', 'relu_3']Jê
+pkg.torch.onnx.stack_traceËFile "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ó
+relu_3
+decoder.3.weight
+decoder.3.bias
+getitem_12node_ConvTranspose_36"ConvTranspose*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ *
+output_padding@@ Jã
+	namespaceÕ: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.4: torch.nn.modules.batchnorm.BatchNorm2d/_native_batch_norm_legit_no_training_4: aten._native_batch_norm_legit_no_training.defaultJC
+!pkg.onnxscript.rewriter.rule_nameFuseBatchNormIntoConvTransposeJÇ
+pkg.torch.onnx.class_hierarchy¤['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jµ
+pkg.torch.onnx.fx_nodeš%_native_batch_norm_legit_no_training_4 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%convolution_1, %p_decoder_4_weight, %p_decoder_4_bias, %b_decoder_4_running_mean, %b_decoder_4_running_var, 0.1, 1e-05), kwargs = {})Jd
+pkg.torch.onnx.name_scopesF['', 'decoder', 'decoder.4', '_native_batch_norm_legit_no_training_4']JÓ
+pkg.torch.onnx.stack_trace´File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/batchnorm.py", line 210, in forward
+    return F.batch_norm(
+©
+
+getitem_12relu_4node_relu_4"ReluJ
+	namespace: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.5: torch.nn.modules.activation.ReLU/relu_4: aten.relu.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‰
+pkg.torch.onnx.fx_nodeo%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_12,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'decoder', 'decoder.5', 'relu_4']Jê
+pkg.torch.onnx.stack_traceËFile "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ù
+
+relu_4
+decoder.6.weight
+decoder.6.biasconvolution_2node_convolution_2"ConvTranspose*
+group *
+pads@@@@ *
+kernel_shape@@ *
+strides@@ *
+auto_pad"NOTSET *
+	dilations@@ *
+output_padding@@ J°
+	namespace¢: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.6: torch.nn.modules.conv.ConvTranspose2d/convolution_2: aten.convolution.defaultJ­
+pkg.torch.onnx.class_hierarchyŠ['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.ConvTranspose2d', 'aten.convolution.default']Jä
+pkg.torch.onnx.fx_nodeÉ%convolution_2 : [num_users=1] = call_function[target=torch.ops.aten.convolution.default](args = (%relu_4, %p_decoder_6_weight, %p_decoder_6_bias, [2, 2], [1, 1], [1, 1], True, [1, 1], 1), kwargs = {})JK
+pkg.torch.onnx.name_scopes-['', 'decoder', 'decoder.6', 'convolution_2']JÕ
+pkg.torch.onnx.stack_trace¶File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 1198, in forward
+    return F.conv_transpose2d(
+¨
+convolution_2reconstructed_spectrogram	node_tanh"TanhJ›
+	namespace: __main__.ConvAutoencoder/decoder: torch.nn.modules.container.Sequential/decoder.7: torch.nn.modules.activation.Tanh/tanh: aten.tanh.defaultJ 
+pkg.torch.onnx.class_hierarchy~['__main__.ConvAutoencoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Tanh', 'aten.tanh.default']JŠ
+pkg.torch.onnx.fx_nodep%tanh : [num_users=1] = call_function[target=torch.ops.aten.tanh.default](args = (%convolution_2,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'decoder', 'decoder.7', 'tanh']JØ
+pkg.torch.onnx.stack_trace¹File "/Users/aanyasarna/Desktop/vision/backend/scripts/train.py", line 56, in forward
+    out = self.decoder(z)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 259, in forward
+    input = module(input)
+  File "/Users/aanyasarna/Desktop/vision/backend/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 433, in forward
+    return torch.tanh(input)
+main_graph*]Bencoder.0.weightj!
+locationautoencoder.onnx.dataj
+offset0j
+length576p*VBencoder.0.biasJ@!\ú¾„iÜ¾¶±
+¿u¶±>\¤ò>á¡ä¾ŽÐ?*Ý>
+_Ø>ð+¿)Só¾;¿>âÁ ¿ñÎÒ>º¤Þ¾7Ið>*— Bencoder.3.biasJ€TÈÃ>+L¾º‡¢¿âz»¾-Þí>ñ´’¿ßÍƒ¿6[½¼A¡¿EIE>­I<?Þ¡î><à>¼hY>o‹`>Æ}¿Ë’¬¾œ¬›>µ–Ð¿g5?µË>‚b?7§¼¿"ÒS=[§{¾¯×¯>ßÎ¼J'>±|¾sõ¶¿W”‹?yý»*6Bencoder.6.biasJ ’Àü=Dç>õ5? f>Ã€Ž>˜²á>?>úââ<*— Bdecoder.0.biasJ€%n#¿’òâ¾õñç¾d<ü5Ù¼Ž	¿¹ÞŒ>t/	¿ò§m½ÛÁ¼>FŠ ¿h¦»ìÉs¾˜*|=hUY;‡Ë¿½ù>0ëÞ¼Áa©½˜";œÁÂ¼K¿/>xŽV»o(¸=µ½¨%à;ŠPŸ¼ {,»è@½¾A®}½‰Ä:®hp¾*VBdecoder.3.biasJ@ûÁ½·d¦<8<O»fQÄ½Ô†»t²m<8I¼Ö.¾Pa	¾°XD?©?ØD¸?$¡j½2‡‘> ºˆ½ôø¼*_Bdecoder.6.weightj!
+locationautoencoder.onnx.dataj
+offset576j
+length576p*Bdecoder.6.biasJ*DŸ¾*b Bencoder.3.weightj!
+locationautoencoder.onnx.dataj
+offset1152j
+length18432p*b Bencoder.6.weightj!
+locationautoencoder.onnx.dataj
+offset19584j
+length9216p*b Bdecoder.0.weightj!
+locationautoencoder.onnx.dataj
+offset28800j
+length9216p*c Bdecoder.3.weightj!
+locationautoencoder.onnx.dataj
+offset38016j
+length18432pZÑ
+input_spectrogram
+
+
+
+@
+@"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
+!pkg.torch.onnx.original_node_namexbŸ
+reconstructed_spectrogram
+
+
+
+@
+@"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT")
+!pkg.torch.onnx.original_node_nametanhj*
+encoder.0.weight
+
+
+
+
+j
+encoder.0.bias
+
+
+j
+encoder.3.bias
+
+
+ j
+encoder.6.bias
+
+
+j
+decoder.0.bias
+
+
+ j
+decoder.3.bias
+
+
+jà
+decoder.6.weight
+
+
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_decoder_6_weightjÐ
+decoder.6.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_decoder_6_biasj*
+encoder.3.weight
+
+ 
+
+
+j*
+encoder.6.weight
+
+
+ 
+
+j*
+decoder.0.weight
+
+
+ 
+
+j*
+decoder.3.weight
+
+ 
+
+
+j!
+getitem
+
+
+
+ 
+ j
+relu
+
+
+
+ 
+ j#
+	getitem_3
+
+
+ 
+
+j 
+relu_1
+
+
+ 
+
+j#
+	getitem_6
+
+
+
+
+j 
+relu_2
+
+
+
+
+j#
+	getitem_9
+
+
+ 
+
+j 
+relu_3
+
+
+ 
+
+j$
+
+getitem_12
+
+
+
+ 
+ j 
+relu_4
+
+
+
+ 
+ j'
+convolution_2
+
+
+
+@
+@‚‰
+0pkg.torch.export.ExportedProgram.graph_signatureÔ
+# inputs
+p_encoder_0_weight: PARAMETER target='encoder.0.weight'
+p_encoder_0_bias: PARAMETER target='encoder.0.bias'
+p_encoder_1_weight: PARAMETER target='encoder.1.weight'
+p_encoder_1_bias: PARAMETER target='encoder.1.bias'
+p_encoder_3_weight: PARAMETER target='encoder.3.weight'
+p_encoder_3_bias: PARAMETER target='encoder.3.bias'
+p_encoder_4_weight: PARAMETER target='encoder.4.weight'
+p_encoder_4_bias: PARAMETER target='encoder.4.bias'
+p_encoder_6_weight: PARAMETER target='encoder.6.weight'
+p_encoder_6_bias: PARAMETER target='encoder.6.bias'
+p_encoder_7_weight: PARAMETER target='encoder.7.weight'
+p_encoder_7_bias: PARAMETER target='encoder.7.bias'
+p_decoder_0_weight: PARAMETER target='decoder.0.weight'
+p_decoder_0_bias: PARAMETER target='decoder.0.bias'
+p_decoder_1_weight: PARAMETER target='decoder.1.weight'
+p_decoder_1_bias: PARAMETER target='decoder.1.bias'
+p_decoder_3_weight: PARAMETER target='decoder.3.weight'
+p_decoder_3_bias: PARAMETER target='decoder.3.bias'
+p_decoder_4_weight: PARAMETER target='decoder.4.weight'
+p_decoder_4_bias: PARAMETER target='decoder.4.bias'
+p_decoder_6_weight: PARAMETER target='decoder.6.weight'
+p_decoder_6_bias: PARAMETER target='decoder.6.bias'
+b_encoder_1_running_mean: BUFFER target='encoder.1.running_mean' persistent=True
+b_encoder_1_running_var: BUFFER target='encoder.1.running_var' persistent=True
+b_encoder_1_num_batches_tracked: BUFFER target='encoder.1.num_batches_tracked' persistent=True
+b_encoder_4_running_mean: BUFFER target='encoder.4.running_mean' persistent=True
+b_encoder_4_running_var: BUFFER target='encoder.4.running_var' persistent=True
+b_encoder_4_num_batches_tracked: BUFFER target='encoder.4.num_batches_tracked' persistent=True
+b_encoder_7_running_mean: BUFFER target='encoder.7.running_mean' persistent=True
+b_encoder_7_running_var: BUFFER target='encoder.7.running_var' persistent=True
+b_encoder_7_num_batches_tracked: BUFFER target='encoder.7.num_batches_tracked' persistent=True
+b_decoder_1_running_mean: BUFFER target='decoder.1.running_mean' persistent=True
+b_decoder_1_running_var: BUFFER target='decoder.1.running_var' persistent=True
+b_decoder_1_num_batches_tracked: BUFFER target='decoder.1.num_batches_tracked' persistent=True
+b_decoder_4_running_mean: BUFFER target='decoder.4.running_mean' persistent=True
+b_decoder_4_running_var: BUFFER target='decoder.4.running_var' persistent=True
+b_decoder_4_num_batches_tracked: BUFFER target='decoder.4.num_batches_tracked' persistent=True
+x: USER_INPUT
+
+# outputs
+tanh: USER_OUTPUT
+‚8
+2pkg.torch.export.ExportedProgram.range_constraints{}B
+ 

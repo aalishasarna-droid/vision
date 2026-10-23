@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch checkpoints and large binaries
+*.pth
+*.pt
+# Allow models folder structure but ignore large files if desired
+# backend/models/*.pt
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment & IDE
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
+
+# Audio Data
+data/**/*.wav
+data/*.wav
+data/fan/
+!data/normal/.gitkeep
+!data/anomaly/.gitkeep
